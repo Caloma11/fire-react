@@ -13,7 +13,7 @@ const App = () => {
   ]);
 
   const [wind, setWind] = useState(-1);
-  const [delay, setDelay] = useState(50)
+  const [delay, setDelay] = useState(50);
 
   const calculatePropagation = () => {
     const firePixelsCopy = [...firePixels];
