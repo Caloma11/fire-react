@@ -13,7 +13,7 @@ const App = () => {
   ]);
 
   const [wind, setWind] = useState(-1);
-  const [running, setRunning] = useState(false);
+  const [delay, setDelay] = useState(50)
 
   const calculatePropagation = () => {
     const firePixelsCopy = [...firePixels];
@@ -46,12 +46,10 @@ const App = () => {
   // https://overreacted.io/making-setinterval-declarative-with-react-hooks/
   const useInterval = (callback, delay) => {
     const savedCallback = useRef();
-    const savedRunning = useRef();
 
     // Remember the latest callback.
     useEffect(() => {
       savedCallback.current = callback;
-      savedRunning.current = running;
     }, [callback]);
 
     // Set up the interval.
@@ -59,21 +57,21 @@ const App = () => {
       function tick() {
         savedCallback.current();
       }
-      if (delay !== null && running) {
+      if (delay !== null) {
         let id = setInterval(tick, delay);
         return () => clearInterval(id);
       }
-    }, [delay, running]);
+    }, [delay]);
   };
 
   useInterval(() => {
     calculatePropagation();
-  }, 50);
+  }, delay);
 
   return (
     <div className="App">
       <Headers
-        {...{ setRunning, running, setWind, firePixels, width, setFirePixels }}
+        {...{ setDelay, delay, setWind, firePixels, width, setFirePixels }}
       />
       <div className="fireCanvas">
         <FireTable {...{ height, width, firePixels, setFirePixels }} />

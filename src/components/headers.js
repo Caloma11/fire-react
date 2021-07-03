@@ -3,8 +3,8 @@ import IntensityRange from "./intensityRange.js";
 import Controls from "./controls";
 
 const Headers = ({
-  setRunning,
-  running,
+  setDelay,
+  delay,
   setWind,
   firePixels,
   setFirePixels,
@@ -13,7 +13,7 @@ const Headers = ({
   return (
     <div className="headers">
       <div className="stopAndWind">
-        <Controls setWind={setWind} running={running} setRunning={setRunning} />
+        <Controls setWind={setWind} delay={delay} setDelay={setDelay} />
       </div>
       <div className="intensityContainer">
         <IntensityRange
