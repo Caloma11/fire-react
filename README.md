@@ -11,4 +11,4 @@ A react implementation of the alogrithm used in [Doom](https://en.wikipedia.org/
 
 It is inspired by other implementations found in [here](https://github.com/filipedeschamps/doom-fire-algorithm).
 
-It can be seen at (https://doom-fireplace.netlify.app/)[https://doom-fireplace.netlify.app/].
+It can be seen at https://doom-fireplace.netlify.app/.
