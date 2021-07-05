@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://doom-fireplace.netlify.app/">
-    <img src="https://github.com/Caloma11/fire-react/tree/master/public/functions.gif?raw=true" width="490">
+    <img src="https://github.com/Caloma11/fire-react/blob/master/public/functions.gif" width="490">
   </a>
 </p>
 
